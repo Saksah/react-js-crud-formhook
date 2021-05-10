@@ -18,10 +18,10 @@ const UserTable = (props) => {
                     props.listaUsuarios.length > 0 ? /* si la cantidad de usuarios es mayor a 0: */
                         props.listaUsuarios.map(elemento => ( /* primer caso de la conficion */
                             <tr key={elemento.id}>
-                                <td>{elemento.name}</td>
+                                <td>{elemento.id} - {elemento.name}</td>
                                 <td>{elemento.username}</td>
                                 <td>
-                                    <button className="button muted-button">Edit</button>
+                                    <button className="button muted-button" onClick={() => {props.editUser(elemento)}}>Edit</button>
                                     <button className="button muted-button" onClick={() => {props.deleteUser(elemento.id)}}>Delete</button>
                                 </td>
                             </tr>
