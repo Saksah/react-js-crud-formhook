@@ -7,9 +7,9 @@ const EditUserForm = (props) => {
                                       este formulario para editarlo */
 
     const { register, handleSubmit, formState: { errors }, setValue } = useForm({
-                                                                defaultValues: props.userEditar /* con esto automaticamente los datos de usuario que voy a editar se mostrarn en los campos,
-                                                                                                    no sin antes hacer uso del "setValue() el cual aplico lineas abajo." */
-                                                              });
+                                                                            defaultValues: props.userEditar /* con esto automaticamente los datos de usuario que voy a editar se mostrarn en los campos,
+                                                                                                                no sin antes hacer uso del "setValue() el cual aplico lineas abajo." */
+                                                                        });
     setValue('name', props.userEditar.name);
     setValue('username', props.userEditar.username);
 
